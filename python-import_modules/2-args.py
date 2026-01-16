@@ -5,7 +5,7 @@ if __name__ == "__main__":
     if args_numbers == 0:
         print("0 arguments.")
     else:
-        token = "argument" if args_numebers == 1 else "arguments"
-        print("{} {}: arguments:".format(args_numbers, token))
+        token = "argument" if args_numbers == 1 else "arguments"
+        print("{} {}:".format(args_numbers, token))
         for numbers, arg in enumerate(sys.argv[1:], start=1):
             print("{}: {}".format(numbers, arg))
