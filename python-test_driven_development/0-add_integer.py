@@ -6,6 +6,8 @@ The function checks that both arguments are either integers or floats.
 If a float is provided, it is converted to an integer before addition.
 Type errors are raised if the arguments are of invalid types.
 """
+
+
 def add_integer(a, b=98):
     """
     Adds two numbers after converting them to integers if needed.
