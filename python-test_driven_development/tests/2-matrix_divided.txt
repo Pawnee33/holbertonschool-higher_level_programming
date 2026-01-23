@@ -15,7 +15,7 @@ ZeroDivisionError: division by zero
 >>> matrix_divided(matrix, "a")
 Traceback (most recent call last)
     ...
-TypeError: dic must be a number
+TypeError: div must be a number
 >>> matrix2 = [[1, 2], [3, "4"]]
 >>> matrix_divided(matrix2, 2)
 Traceback (most recent call last):
