@@ -4,7 +4,8 @@ This module defines a function to add two numbers as integers.
 
 The function checks that both arguments are either integers or floats.
 If a float is provided, it is converted to an integer before addition.
-Type errors are raised if the arguments are of invalid types.
+Type errors are raised if the arguments is not an integer or float,
+or if a float is NaN or infinity.
 """
 
 
@@ -29,6 +30,11 @@ def add_integer(a, b=98):
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
+
+    if isinstance(a, float) and (math.isnan(a) or math.isinf(a)):
+        raise TypeError("a must be an integer")
+    if isinstance(b, float) and (math.isnan(b) or math.isinf(b)):
         raise TypeError("b must be an integer")
 
     return int(a) + int(b)
