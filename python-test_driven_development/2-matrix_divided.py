@@ -31,12 +31,15 @@ def matrix_divided(matrix, div):
             "of integers/floats"
             )
 
-    row_length = len(matrix[0]) if matrix else 0
-    for row in matrix:
-        if not row or len(row) != row_length:
+        if not row:
             raise TypeError(
                 "matrix must be a matrix (list of lists) "
-                "of integers/floats")
+                "of integers/floats"
+            )
+
+        if len(row) != row_length:
+            raise TypeError("Each row of the matrix must have the same size")
+
         for element in row:
             if not isinstance(element, (int, float)):
                 raise TypeError(
