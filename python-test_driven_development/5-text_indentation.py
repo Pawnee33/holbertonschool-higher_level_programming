@@ -28,7 +28,7 @@ def text_indentation(text):
         char = text[index]
         print(char, end="")
         if char in separators:
-            print("\n", end="")
+            print("\n\n", end="")
             index += 1
             while index < length and text[index] == " ":
                 index += 1
