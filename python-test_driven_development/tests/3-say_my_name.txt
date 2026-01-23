@@ -11,7 +11,7 @@ My name is Walter White
 My name is Bob
 
 >>> say_my_name("Bob", "")
-My name is Bob 
+My name is Bob
 
 >>> say_my_name("", "Defize")
 My name is  Defize
