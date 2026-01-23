@@ -1,27 +1,23 @@
 >>> from importlib import import_module
 >>> add_integer = import_module('0-add_integer').add_integer
 
-Normal cases: addition of integers
-
+# Normal cases: addition of integers
 >>> add_integer(1, 2)
 3
 >>> add_integer(100, -2)
 98
 
-Case with default value
-
+# Case with default value
 >>> add_integer(2)
 100
 
-Float cases: conversion to int before addition
-
+# Float cases: conversion to int before addition
 >>> add_integer(100.3, -2)
 98
 >>> add_integer(2.7, 3.1)
 5
 
-Error cases: TypeError for a or b
-
+# Error cases: TypeError for a or b
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
