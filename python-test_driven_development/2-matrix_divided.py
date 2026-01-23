@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 This module contains a function to divide all elements of a matrix by a number.
-It checks for valid matrix structure, row sizes, element types, and div validity.
+It checks for valid matrix structure, row sizes, element types,
+ and div validity.
 """
 
 
@@ -40,7 +41,8 @@ def matrix_divided(matrix, div):
         for element in row:
             if not isinstance(element, (int, float)):
                 raise TypeError(
-                    "matrix must be a matrix (list of lists) of integers/floats"
+                    "matrix must be a matrix (list of lists)"
+                    " of integers/floats"
                 )
 
     if not isinstance(div, (int, float)):
