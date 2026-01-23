@@ -37,3 +37,36 @@ TypeError: Each row of the matrix must have the same size
 
 >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+>>> matrix_neg = [[-3, -6], [-9, -12]]
+>>> matrix_divided(matrix_neg, 3)
+[[-1.0, -2.0], [-3.0, -4.0]]
+
+>>> matrix_mix = [[1.5, 2], [3, 4.8]]
+>>> matrix_divided(matrix_mix, 1.2)
+[[1.25, 1.67], [2.5, 4.0]]
+
+>>> matrix_zero = [[0, 0], [0, 0]]
+>>> matrix_divided(matrix_zero, 5)
+[[0.0, 0.0], [0.0, 0.0]]
+
+>>> matrix_zero = [[0, 0], [0, 0]]
+>>> matrix_divided(matrix_zero, 5)
+[[0.0, 0.0], [0.0, 0.0]]
+
+>>> matrix_f = [[5, 10], [15, 20]]
+>>> matrix_divided(matrix_f, 2.5)
+[[2.0, 4.0], [6.0, 8.0]]
+
+>>> matrix_1x1 = [[9]]
+>>> matrix_divided(matrix_1x1, 3)
+[[3.0]]
+
+>>> matrix_1x3 = [[2, 4, 6]]
+>>> matrix_divided(matrix_1x3, 2)
+[[1.0, 2.0, 3.0]]
+
+>>> original = [[1,2],[3,4]]
+>>> new_matrix = matrix_divided(original, 2)
+>>> original
+[[1, 2], [3, 4]]
