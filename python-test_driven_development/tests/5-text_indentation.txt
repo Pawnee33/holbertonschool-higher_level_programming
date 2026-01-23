@@ -1,6 +1,18 @@
 >>> from importlib import import_module
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
+>>> text_indentation("Hello.")
+Hello.
+
+>>> text_indentation("How are you?")
+How are you?
+
+>>> text_indentation("I am fine:")
+I am fine:
+
+>>> text_indentation("Holberton.School")
+Holberton.
+School
 
 >>> text_indentation("No special characters")
 No special characters
@@ -8,7 +20,6 @@ No special characters
 >>> text_indentation("")
 >>> text_indentation("No separators here")
 No separators here
-
 
 >>> text_indentation(123)
 Traceback (most recent call last):
