@@ -47,4 +47,3 @@ def matrix_divided(matrix, div):
             new_row.append(round(value / div, 2))
         new_matrix.append(new_row)
     return new_matrix
-    
