@@ -9,6 +9,9 @@ or if a float is NaN or infinity.
 """
 
 
+import math
+
+
 def add_integer(a, b=98):
     """
     Adds two numbers after converting them to integers if needed.
