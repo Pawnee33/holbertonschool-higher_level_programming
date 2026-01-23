@@ -1,0 +1,57 @@
+>>> from importlib import import_module
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Qui est le meilleur développeur? Pawnee est le meilleur développeur.")
+Qui est le meilleur développeur?
+
+
+Pawnee est le meilleur développeur.
+
+
+>>> text_indentation("  Leading and trailing spaces .  Another sentence? ")
+Leading and trailing spaces.
+
+
+Another sentence?
+
+
+>>> text_indentation("No punctuation at end")
+No punctuation at end
+
+>>> text_indentation("")
+>>> text_indentation("Multiple...dots?? and:: colons")
+Multiple.
+
+
+.
+
+
+.
+
+
+dots?
+
+
+?
+
+
+and:
+
+
+:
+
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
