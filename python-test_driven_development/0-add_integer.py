@@ -21,7 +21,10 @@ def add_integer(a, b=98):
     Returns:
     int: The sum of a and b as an integer.
 
+    >>> add_integer(1, 1)
+    2
 
+    
     Raises:
     TypeError: If a or b is not an integer or float.
     """
