@@ -22,7 +22,7 @@ class Square:
         Args:
             size: The size of the square's side. Must be >= 0.
                 Defaul is 0.
-        
+
         Raises:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
@@ -32,4 +32,3 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-      
