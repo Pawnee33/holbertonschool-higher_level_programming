@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-This module is a class Square that define a square
+This module is a class Square that define a square.
+Class include private attribute __size and checks if size
+is an integer >= 0.
 """
 
 
