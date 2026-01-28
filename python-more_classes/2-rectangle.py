@@ -86,7 +86,7 @@ class Rectangle:
         Calculate the area of the Rectangle.
 
         Returns:
-            int: The area result of __width * __height.
+            int: The area result of width * height.
         """
         return self.__width * self.__height
 
@@ -95,8 +95,8 @@ class Rectangle:
         Calculate the perimeter of the Rectangle.
 
         Returns:
-            int: The perimeter result of __width * 2 + __height * 2.
+            int: The perimeter result of 2 * (width + height).
         """
-        if self.__width == 0 or self.__height == 0:
-            perimeter = 0
-        return self.__width * 2 + self.__height * 2
+        if self.width == 0 or self.height == 0:
+            return 0
+        return 2 * (self.width + self.height)
