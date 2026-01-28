@@ -102,5 +102,14 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
+        """
+        __str__ returns the rectangle with the character "#".
+
+        Each line contains the number of times the character '#'
+        appears horizontally and the number of times it appears vertically.
+        If width or height is 0, returns an empty string.
+        """
         if self.width == 0 or self.height == 0:
-            
+            return ""
+        else:
+            return (("#" * self.width + "\n") * self.height)[:-1]
