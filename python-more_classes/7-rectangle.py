@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 """
-This module is an empty class Rectangle that define a square
+This module defines a Rectangle class.
 """
 
 
 class Rectangle:
     """
-    Rectangle define an empty rectangle.
-    And have not Attribute yet becauce we want an empty class that define
-    rectangle.
+    Defines a Rectangle with width and height attributes
+    nd methods to compute area and perimeter.
     """
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """
         Initializes a rectangle with width and height
@@ -20,6 +22,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -112,7 +115,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
-            return (("#" * self.width + "\n") * self.height)[:-1]
+            return ((str(self.print_symbol) * self.width + "\n") * self.height)[:-1]
 
     def __repr__(self):
         """
@@ -129,4 +132,5 @@ class Rectangle:
         Method that execute when the object is no longer in use
         and prints a message 'Bye rectangle...'.
         """
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
