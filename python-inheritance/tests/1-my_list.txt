@@ -1,0 +1,26 @@
+>>> from importlib import import_module
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> len(my_list) == 0
+True
+>>> type(my_list) == MyList
+True
+>>> type(my_list) == list
+False
+>>> my_list.append(1)
+>>> print(my_list)
+[1]
+>>> my_list.append(4)
+>>> print(my_list)
+[1, 4]
+>>> my_list.append(2)
+>>> print(my_list)
+[1, 4, 2]
+>>> my_list.append(3)
+>>> print(my_list)
+[1, 4, 2, 3]
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list
+[1, 4, 2, 3, 5]
