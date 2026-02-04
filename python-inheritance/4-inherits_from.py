@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Module that checks if the object is an instance of class
+and inherits directly from specified class.
+"""
+
+
 def inherits_from(obj, a_class):
     """
     inherits_from checks if the object is an instance of class
