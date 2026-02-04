@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+"""
+Module that checks obj if it is aninstance of
+the specific class.
+"""
+
+
 def is_same_class(obj, a_class):
     """
-    is_same_class checks if the object is instance of
+    is_same_class checks if the object is an instance of
     the specific class.
 
     Rteurns:
