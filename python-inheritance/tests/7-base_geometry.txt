@@ -1,29 +1,44 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-# Test de la méthode area
 >>> BaseGeometry().area()
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
-
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 >>> bg.integer_validator("height", 1)
 >>> bg.integer_validator("depth", 999999)
+>>> bg.integer_validator("big", 1000000)
 
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
->>> bg.integer_validator("flag", 3.14)
+>>> bg.integer_validator("pi", 3.14)
+Traceback (most recent call last):
+...
+TypeError: pi must be an integer
+>>> bg.integer_validator("lst", [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: lst must be an integer
+>>> bg.integer_validator("flag", True)
 Traceback (most recent call last):
 ...
 TypeError: flag must be an integer
->>> bg.integer_validator("list_val", [1, 2, 3])
+>>> bg.integer_validator("nothing", None)
 Traceback (most recent call last):
 ...
-TypeError: list_val must be an integer
+TypeError: nothing must be an integer
+>>> bg.integer_validator("tuple_val", (1, 2))
+Traceback (most recent call last):
+...
+TypeError: tuple_val must be an integer
+>>> bg.integer_validator("dict_val", {"a":1})
+Traceback (most recent call last):
+...
+TypeError: dict_val must be an integer
 
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
@@ -37,7 +52,11 @@ ValueError: distance must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: width must be greater than 0
-
+>>> bg.integer_validator("negative_one", -1)
+Traceback (most recent call last):
+...
+ValueError: negative_one must be greater than 0
 
 >>> bg.integer_validator("one", 1)
->>> bg.integer_validator("big_number", 1000000)
+>>> bg.integer_validator("two", 2)
+>>> bg.integer_validator("max_val", 10**6)
