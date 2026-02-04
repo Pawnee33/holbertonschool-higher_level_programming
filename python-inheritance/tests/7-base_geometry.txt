@@ -1,12 +1,15 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+# Test de area() : doit lever l'exception
 >>> BaseGeometry().area()
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
+# Création de l'objet
 >>> bg = BaseGeometry()
 
+# Tests valeurs valides
 >>> bg.integer_validator("width", 1)
 >>> bg.integer_validator("height", 2)
 >>> bg.integer_validator("depth", 999999)
@@ -15,6 +18,7 @@ Exception: area() is not implemented
 >>> bg.integer_validator("medium", 500)
 >>> bg.integer_validator("small", 5)
 
+# Tests types invalides
 >>> bg.integer_validator("name", "Alice")
 Traceback (most recent call last):
 ...
@@ -60,6 +64,7 @@ Traceback (most recent call last):
 ...
 TypeError: ba must be an integer
 
+# Tests valeurs <= 0
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ...
@@ -81,6 +86,7 @@ Traceback (most recent call last):
 ...
 ValueError: min_val must be greater than 0
 
+# Tests limites et appels multiples valides
 >>> bg.integer_validator("one", 1)
 >>> bg.integer_validator("two", 2)
 >>> bg.integer_validator("ten", 10)
@@ -88,6 +94,22 @@ ValueError: min_val must be greater than 0
 >>> bg.integer_validator("million", 10**6)
 >>> bg.integer_validator("billion", 10**9)
 >>> bg.integer_validator("trillion", 10**12)
+>>> bg.integer_validator("extremely_large", 10**12)
+>>> bg.integer_validator("huge_number", 10**18)
+>>> bg.integer_validator("one_again", 1)
+>>> bg.integer_validator("valid1", 1234)
+>>> bg.integer_validator("valid2", 5678)
+>>> bg.integer_validator("valid3", 91011)
 >>> bg.integer_validator("mid", 123)
 >>> bg.integer_validator("large", 5000)
 >>> bg.integer_validator("small2", 7)
+
+# Tests négatifs et zéro supplémentaires
+>>> bg.integer_validator("zero_val", 0)
+Traceback (most recent call last):
+...
+ValueError: zero_val must be greater than 0
+>>> bg.integer_validator("neg_val", -9999)
+Traceback (most recent call last):
+...
+ValueError: neg_val must be greater than 0
