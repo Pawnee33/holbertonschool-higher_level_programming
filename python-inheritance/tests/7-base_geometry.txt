@@ -7,13 +7,15 @@ Exception: area() is not implemented
 
 >>> bg = BaseGeometry()
 
->>> bg.integer_validator("my_int", 12)
->>> bg.integer_validator("width", 89)
->>> bg.integer_validator("height", 1)
+>>> bg.integer_validator("width", 1)
+>>> bg.integer_validator("height", 2)
 >>> bg.integer_validator("depth", 999999)
 >>> bg.integer_validator("big", 1000000)
+>>> bg.integer_validator("huge", 10**9)
+>>> bg.integer_validator("medium", 500)
+>>> bg.integer_validator("small", 5)
 
->>> bg.integer_validator("name", "John")
+>>> bg.integer_validator("name", "Alice")
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
@@ -41,6 +43,22 @@ TypeError: tuple_val must be an integer
 Traceback (most recent call last):
 ...
 TypeError: dict_val must be an integer
+>>> bg.integer_validator("comp", 3+4j)
+Traceback (most recent call last):
+...
+TypeError: comp must be an integer
+>>> bg.integer_validator("s", {1,2})
+Traceback (most recent call last):
+...
+TypeError: s must be an integer
+>>> bg.integer_validator("fs", frozenset([1]))
+Traceback (most recent call last):
+...
+TypeError: fs must be an integer
+>>> bg.integer_validator("ba", bytearray([1,2]))
+Traceback (most recent call last):
+...
+TypeError: ba must be an integer
 
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
@@ -58,11 +76,18 @@ ValueError: width must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: negative_one must be greater than 0
+>>> bg.integer_validator("min_val", -999)
+Traceback (most recent call last):
+...
+ValueError: min_val must be greater than 0
 
 >>> bg.integer_validator("one", 1)
 >>> bg.integer_validator("two", 2)
->>> bg.integer_validator("max_val", 10**6)
+>>> bg.integer_validator("ten", 10)
+>>> bg.integer_validator("hundred", 100)
+>>> bg.integer_validator("million", 10**6)
 >>> bg.integer_validator("billion", 10**9)
->>> bg.integer_validator("small", 5)
->>> bg.integer_validator("large", 5000)
+>>> bg.integer_validator("trillion", 10**12)
 >>> bg.integer_validator("mid", 123)
+>>> bg.integer_validator("large", 5000)
+>>> bg.integer_validator("small2", 7)
