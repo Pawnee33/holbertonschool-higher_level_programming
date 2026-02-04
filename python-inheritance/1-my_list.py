@@ -8,7 +8,6 @@ class MyList(list):
     """
     Mylist retrives the behaviour of class list.
     """
-    pass
 
     def print_sorted(self):
         """
