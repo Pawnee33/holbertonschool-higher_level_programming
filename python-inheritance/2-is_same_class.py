@@ -7,7 +7,7 @@ the specific class.
 
 def is_same_class(obj, a_class):
     """
-    is_same_class checks if the object is an instance of
+    is_same_class Method checks if the object is an instance of
     the specific class.
 
     Rteurns:
