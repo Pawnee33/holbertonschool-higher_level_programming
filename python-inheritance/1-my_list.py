@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
-This module is a class that inherits from list.
-"""
+"""Module that defines a custom list class with
+ a method to print it sorted.
+ """
 
 
 class MyList(list):
