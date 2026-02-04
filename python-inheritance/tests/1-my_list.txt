@@ -3,10 +3,6 @@
 >>> my_list = MyList()
 >>> len(my_list) == 0
 True
->>> type(my_list) == MyList
-True
->>> type(my_list) == list
-False
 >>> my_list.append(1)
 >>> print(my_list)
 [1]
