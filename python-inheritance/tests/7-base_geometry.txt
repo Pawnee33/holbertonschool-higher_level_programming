@@ -4,7 +4,9 @@
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
+
 >>> bg = BaseGeometry()
+
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 >>> bg.integer_validator("height", 1)
@@ -60,3 +62,7 @@ ValueError: negative_one must be greater than 0
 >>> bg.integer_validator("one", 1)
 >>> bg.integer_validator("two", 2)
 >>> bg.integer_validator("max_val", 10**6)
+>>> bg.integer_validator("billion", 10**9)
+>>> bg.integer_validator("small", 5)
+>>> bg.integer_validator("large", 5000)
+>>> bg.integer_validator("mid", 123)
