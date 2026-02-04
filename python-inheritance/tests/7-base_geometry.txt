@@ -113,3 +113,46 @@ ValueError: zero_val must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: neg_val must be greater than 0
+
+# Tests types invalides supplémentaires
+>>> bg.integer_validator("float_val", 1.0)
+Traceback (most recent call last):
+...
+TypeError: float_val must be an integer
+>>> bg.integer_validator("str_val", "100")
+Traceback (most recent call last):
+...
+TypeError: str_val must be an integer
+>>> bg.integer_validator("list_val", [1])
+Traceback (most recent call last):
+...
+TypeError: list_val must be an integer
+>>> bg.integer_validator("tuple_val2", (1,))
+Traceback (most recent call last):
+...
+TypeError: tuple_val2 must be an integer
+>>> bg.integer_validator("dict_val2", {"x":1})
+Traceback (most recent call last):
+...
+TypeError: dict_val2 must be an integer
+>>> bg.integer_validator("set_val", {1})
+Traceback (most recent call last):
+...
+TypeError: set_val must be an integer
+>>> bg.integer_validator("bool_val", False)
+Traceback (most recent call last):
+...
+TypeError: bool_val must be an integer
+>>> bg.integer_validator("none_val", None)
+Traceback (most recent call last):
+...
+TypeError: none_val must be an integer
+>>> bg.integer_validator("complex_val", 1+2j)
+Traceback (most recent call last):
+...
+TypeError: complex_val must be an integer
+
+# Tests limites encore plus grands
+>>> bg.integer_validator("max_int", 10**18)
+>>> bg.integer_validator("mid_val", 123456)
+>>> bg.integer_validator("min_positive", 1)
