@@ -22,7 +22,6 @@ class Shape(ABC):
 
     Any shape must implement the `area` and `perimeter` methods.
     """
-    pass
 
     @abstractmethod
     def area(self):
@@ -30,7 +29,7 @@ class Shape(ABC):
         Calculate the area of the Shape.
 
         Returns:
-            int: The area result of Shape.
+            float: The area result of Shape.
         """
         pass
 
@@ -40,7 +39,7 @@ class Shape(ABC):
         Calculate the perimeter of the Shape.
 
         Returns:
-            int: The perimeter result of Shape.
+            float: The perimeter result of Shape.
         """
         pass
 
@@ -56,7 +55,7 @@ class Circle(Shape):
         Calculate the area of the Shape.
 
         Returns:
-            int: The area result of pi * radius ** 2.
+            float: The area result of pi * radius ** 2.
         """
         return math.pi * self.__radius ** 2
 
@@ -65,7 +64,7 @@ class Circle(Shape):
         Calculate the perimeter of the Shape.
 
         Returns:
-            int: Perimeter of the circle using 2 * math.pi * radius.
+            float: Perimeter of the circle using 2 * math.pi * radius.
         """
         return 2 * math.pi * self.__radius
 
@@ -85,7 +84,7 @@ class Rectangle(Shape):
         Calculate the area of the Shape.
 
         Returns:
-            int: The area result of width * height.
+            float: The area result of width * height.
         """
         return self.__width * self.__height
 
@@ -94,10 +93,8 @@ class Rectangle(Shape):
         Calculate the perimeter of the Shape.
 
         Returns:
-            int: The perimeter result of 2 * (width + height).
+            float: The perimeter result of 2 * (width + height).
         """
-        if self.__width == 0 or self.__height == 0:
-            return 0
         return 2 * (self.__width + self.__height)
 
 
