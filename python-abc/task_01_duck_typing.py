@@ -101,5 +101,5 @@ def shape_info(obj):
     Args:
         obj (Shape): An instance of a shape.
     """
-    print("Area:", obj.area())
-    print("Perimeter:", obj.perimeter())
+    print(f"Area: {obj.area()}")
+    print(f"Perimeter: {obj.perimeter()}")
