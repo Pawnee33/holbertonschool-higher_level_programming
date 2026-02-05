@@ -18,11 +18,6 @@ from abc import ABC, abstractmethod
 
 
 class Shape(ABC):
-    """Abstract base class for all shapes.
-
-    Any shape must implement the `area` and `perimeter` methods.
-    """
-
     @abstractmethod
     def area(self):
         """
