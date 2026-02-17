@@ -1,0 +1,42 @@
+1.Différence entre HTTP et HTTPS : 
+HTTP est un protocole qui permet de récupérer des ressources sur le Web qui suit un modèle client-serveur.
+L’agent client une requête est envoyé au serveur grâce à des messages standardisés, méthode, chemin, une version HTTP, des en-têtes de requête et parfois un corps.
+Puis le serveur envoi une réponse pareil avec des messages standardisés version HTTP, code statut, message statut, en-tête de réponse, et le corps réponse.
+
+Avec HTTP les données sont envoyées en clair, ce qui veut dire que n’importe qui peut lire ces données, un Hacker peut voir exactement les informations envoyées ou reçues.
+Ça expose toutes les informations sensibles, identifiants, numéros de carte bancaire etc.
+
+Avec HTTPS ajoute un Transport layer Security (TLS) pour protéger les données. TLS va chiffrer les données et rendre les données incompréhensibles.
+HTTPS aide à authentifier le serveur, le serveur prouve son identité via son certificat Secure sockets layer (SSL).
+
+2.Comprendre le fonctionnement et la structure de bases des requêtes et réponses HTTP: 
+Le fonctionnement et la structure de bases des requêtes et réponses HTTP repose sur les échanges entre l’agent client et le serveur.
+Le client envoie une requête HTTP, puis le serveur renvoie une réponse HTTP.
+Une requête HTTP est un message envoyé par le client pour demander quelque chose au serveur.
+
+Une Requête HTTP contient une méthode comme “Get” qui va récupérer les données, elle contient un chemin qui indique quelle ressource est demandée au serveur.
+Elle indique une version du protocole HTTP qui est utilisée, elle peut également fournir des informations supplémentaires avec une en-tête et parfois un corps qui envoie des données.
+
+Une Réponse HTTP est le message renvoyé par le serveur après avoir traité la requête.
+Le message de la réponse contient également une version HTTP, elle contient un code de statut qui indique le résultat de la requête comme ça le client peut savoir si tout s’est bien passé.
+Il contient aussi un message de statut qui nous informe du statut du message.
+Et va aussi contenir des en-têtes décrivant la réponse et un corps qui contient la ressource demandée.
+
+Ça permet au client de savoir si la requête a réussi ou échoué.
+
+3.Reconnaître et expliquer les méthodes HTTP courantes et les codes d’état : 
+
+Méthode: GET
+Description: Récupération d’une page d'accueil.
+Status Code: 200 OK
+Description: La requête a réussi normalement
+
+Méthode: OPTIONS
+Description: Authorisation d’une requête
+Status Code: 200 OK
+Description: La requête est authorisé
+
+Méthode: POST
+Description: Envoie de données
+Status Code: 200 OK
+Description: A traité la demande avec succès
