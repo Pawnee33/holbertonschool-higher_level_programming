@@ -3,6 +3,7 @@
 import http.server
 import json
 
+PORT = 8000
 
 class Handler(http.server.BaseHTTPRequestHandler):
     """Handles GET requests for a simple API with endpoints:
@@ -50,6 +51,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
+    """Start the HTTP server on port 8000."""
     PORT = 8000
     server_address = ('', PORT)
     httpd = HTTPServer(server_address, Handler)
