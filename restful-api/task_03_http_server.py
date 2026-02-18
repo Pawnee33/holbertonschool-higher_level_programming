@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Simple HTTP API: /, /data (JSON), /status (OK), 404 else."""
+
+
 import http.server
 import json
 
@@ -38,7 +40,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
         elif self.path == "/info":
             info = {
                 "version": "1.0",
-                "description": "A simple API built with http.server"}
+                "description": "A simple API built with http.server"
+            }
             self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
