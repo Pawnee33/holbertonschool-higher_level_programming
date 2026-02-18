@@ -5,7 +5,7 @@ import json
 
 PORT = 8000
 
-class Handler(http.server.BaseHTTPRequestHandler):
+class Handler (http.server.BaseHTTPRequestHandler):
     """Handles GET requests for a simple API with endpoints:
     /, /data, /status, /info.
     """
