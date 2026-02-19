@@ -31,11 +31,10 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(data).encode('utf-8'))
 
         elif self.path == "/status":
-            status = {"status": "OK"}
             self.send_response(200)
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write(json.dumps(status).encode('utf-8'))
+            self.wfile.write(b"OK")
 
         elif self.path == "/info":
             info = {
