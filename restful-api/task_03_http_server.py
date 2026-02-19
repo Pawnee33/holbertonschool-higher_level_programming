@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Simple HTTP API: /, /data (JSON), /status (OK), 404 else."""
 
-
 import http.server
+from http.server import HTTPServer
 import json
 
 PORT = 8000
@@ -58,6 +58,6 @@ if __name__ == "__main__":
     """Start the HTTP server on port 8000."""
     PORT = 8000
     server_address = ('', PORT)
-    httpd = http.server.HTTPServer(server_address, Handler)
-    print(f"Serving on port {PORT}...")
+    httpd = HTTPServer(server_address, Handler)
+    print(f"Serving running on port {PORT}")
     httpd.serve_forever()
