@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Simple Flask API to manage users in memory.
+"""
 
 from flask import Flask, jsonify, request
 
@@ -10,11 +13,13 @@ users = {}
 
 @app.route('/')
 def home():
+    """Return a welcome message."""
     return "Welcome to the Flask API!"
 
 
 @app.route('/data')
 def get_data():
+    """Return the list of all usernames."""
     return jsonify(list(users.keys()))
 
 
@@ -25,6 +30,7 @@ def status():
 
 @app.route('/users/<username>')
 def get_user(username):
+    """Return user data for a given username."""
     user = users.get(username)
     if user:
         return jsonify(user)
@@ -34,6 +40,7 @@ def get_user(username):
 
 @app.route('/add_user', methods=['POST'])
 def add_user():
+    """Add a new user to the users dictionary."""
     if not request.is_json:
         return jsonify({"error": "Invalid JSON"}), 400
 
