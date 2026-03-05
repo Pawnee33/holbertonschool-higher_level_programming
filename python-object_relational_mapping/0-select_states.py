@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module that connects to a MySQL database and lists all states
+ordered by id from the states table.
+"""
+
 
 import MySQLdb
 import sys
