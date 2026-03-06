@@ -21,7 +21,7 @@ if __name__ == "__main__":
     cursor.execute(
         "SELECT id, name "
         "FROM states "
-        "WHERE states.name LIKE 'N%' "
+        "WHERE BINARY states.name LIKE 'N%' "
         "ORDER BY id ASC"
     )
 
