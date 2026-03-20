@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let xTimes = parseInt(process.argv[2]);
+const xTimes = parseInt(process.argv[2]);
 if (isNaN(xTimes)) {
   console.log('Missing number of occurrences');
 } else {
