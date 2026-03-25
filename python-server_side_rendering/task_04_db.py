@@ -72,7 +72,7 @@ def products():
                     }
                     for row in rows
                 ]
-            except sqlite3.OperationalError as e:
+            except sqlite3.OperationalError:
                 return render_template('product_display.html', error="Database error")
 
     if product_id:
